@@ -1,0 +1,292 @@
+
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: rgb(177,229,243,0.06);
+  --color-text-main: #000000;
+  --color-primary: rgb(92,92,88,2);
+  --wrapper-height: 87vh;
+  --image-max-width: 400px;
+  --image-margin: 1rem;
+  --font-family: "cursive"; 
+  --font-family-header: "system-ui";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Our remix on glitch button 
+.btn_lien {
+  font-family: cursive;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 4em;
+  align-items: center;
+  cursor: pointer;
+  
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-right: auto;
+}
+.btn_lien img {
+  margin-right: 0.2rem;
+}
+
+.btn_lien:hover {
+  background-color: red;
+}
+*/
+
+.btn_lien {
+  font-family: cursive;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color:#1363F3;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2rem;
+  align-items: center;
+  cursor: pointer;
+  
+  border: 1px solid;
+  border-color: none;
+  box-sizing: inherit;
+  border-radius: 1px;
+  text-decoration: none;
+  white-space: nowrap;
+  width:100%;
+  margin-left: auto;
+}
+.btn_lien img {
+  margin-right: 0.5rem;
+}
+.btn_lien:hover {
+  background-color: #C2D3F0;
+}
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #FF5733;
+  
+}
+
+.footer a:hover {
+  background: var(--color-primary);
+  color:#C2D3F0
+}
+.footer a:not(.btn_lien):visited {
+  font-family: cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #FF5733;
+  text-decoration: none;
+  border-style: none;
+}
+
+.footer a:not(.btn_lien):link {
+  font-family: cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #FF5733; /*barre de footer*/
+  text-decoration: none;
+  border-style: none;
+}
+
+.footer .links {
+  padding: 0.25rem 0.25 05rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family: cursive;
+  background-color: var(--color-bg);
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 10rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: #2800FF;
+  font-family: cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 0;
+}
+
+/* Very light scaling for our illustration */
+img.illustration {
+  display:block;
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+
+/* Button - Add it from the README instructions */
+
+
+/* Subheading */
+h2 {
+  color: rgb(103,169,219,2);
+  text-align:center;
+}
+
+/* Interactive image */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+/* Heading */
+h1 {
+  color: rgb(39,121,184);
+  text-align:center;
+}
+
+
+/* Formulaire */
+button {
+  overflow:visible;
+}
+
+button,select{
+  text-transform:none;
+}
+
+button,input,select,textarea {
+  color:rgb(34,103,129);
+  font: cursive;
+  margin:0
+}
+
+#champs{
+  font-size:x-small
+}
+
+input {
+  line-height:normal;
+}
+
+textarea {
+  overflow:auto
+}
+
+form {
+  padding: 2px;
+  height: auto;
+  margin: 10px 10px ;
+  border: 1px dotted black;
+  
+}
+
+.ticker {
+  float:none
+}
+
+.dateD_input {
+  float:left;
+  width:45%
+}
+
+select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+}
+
+select::-ms-expand {
+  display:none;
+}
+
+#form_button {
+  background: rgb(64,167,206);
+  border: solid 2px 2px;
+  color:rgb(234,241,243);
+}
+
+#form_button:hover {
+  background: rgb(234,241,243);
+  color: rgb(64,167,206);
+}
+
+/* Je veux espacer le formulaire*/
+#espace {
+  justify-content: space-evenly;
+  border-spacing: 1cm 2em
+}
+
+.centre{
+  align-items: auto;
+  justify-content: center;
+  place-items: auto
+}
+
+#StockiFy{
+  border-style:inset;
+  border-width:10px
+}
+
+.rslt {
+  border: thick double #7A57D6;
+  border-color:  #32a1ce #C4B2F1;
+  border-width:0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 1rem;
+  
+}
+
