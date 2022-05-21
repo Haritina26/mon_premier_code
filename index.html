@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>StockiFy</title>
+
+    <!-- Meta tags for SEO and social sharing -->
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta
+      name="description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Hello World!" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta
+      property="og:description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+
+  <!-- -------------------------------BODY-------------------------------- -->
+
+  <body>
+    <div id="StockiFy">
+      <h1>StockiFy</h1>
+    </div>
+
+    <div>
+      <img
+        src="https://zupimages.net/up/22/20/hjr2.png"
+        alt="Photo de bannière du site"
+        title="Banière site"
+        class="illustration"
+      />
+
+      <p>
+        ---------------------------------- BIENVENUE A TOI ------------------------------- 
+      </p>
+      <p>
+        Grâce à ce site tu peux récupérer en 2 clics les cours des actions que tu souhaites et calculer le rendement 
+        entre deux dates.
+        Pour ce faire, continue à scroller
+        vers le bas.
+      </p>
+
+      <h2>PRINCIPES</h2>
+      Les étapes sont les suivantes :
+      <ul>
+        <li><strong>Etape 1</strong>: remplir le formulaire</li>
+        <li><strong>Etape 2</strong>: regardes les résultats en bas de page</li>
+        <li><strong>Etape 3</strong>: Modifies tes positions si tu le souhaites en cliquant sur le lien te dirigeant vers un broker!</li>
+      </ul>
+    </div>
+
+    <aside>
+      <img
+           src="https://zupimages.net/up/22/20/g55e.jpg"
+           alt="Seconde image"
+           class="illustration"
+      />
+    </aside>
+    
+    <div id="espace">
+      <h2>FORMULAIRE</h2>
+      <p>Choix des paramètres :</p>
+
+      <form method="post" action="script.js" id="form">
+        <div class="ticker">
+          <select
+            placeholder="Choix ticker"
+            name="ticker"
+            id="ticker_input"
+            required
+          >
+            <option disabled hidden selected>Choix du ticker</option>
+            <option> AAPL </option>
+            <option> MSFT </option>
+            <option> TSLA </option>
+            <option> FB </option>
+          </select>
+        </div>
+
+        <div>
+          <div>
+            <label for="date_debut">Date de début</label>
+            <input
+              type="text"
+              name="date_debut"
+              placeholder="YYYY-MM-DD"
+              id="date_debut"
+            />
+          </div>
+        </div>
+
+        <label for="date_fin">Date de fin*</label>
+        <input
+          type="text"
+          name="date_fin"
+          placeholder="YYYY-MM-DD"
+          id="date_fin"
+          required
+        />
+      
+
+        <p id="champs">
+          (*) champs obligatoires
+        </p>
+        
+        <div class="submit">
+          <input type="submit" value="ENTREE" id="form_button" />
+        </div>
+      </form>
+    </div>
+
+    <div id="montrer">
+      <h2>RESULTATS</h2>
+      
+      <p>
+        Vous avez choisi de récupérer les informations du ticker :
+      </p> 
+      <p class="rslt" id="ticker_rslt"></p>
+      
+      <p>
+        La date de début saisie est 
+      </p> 
+      <p class="rslt" id="date_debut_rslt"></p>
+        
+      <p>
+        La date de fin saisie est 
+      </p> 
+      <p class="rslt" id="date_fin_rslt"></p>
+      
+      <p>
+        Le rendement donne
+      </p> 
+      <p class="rslt" id="rendement"></p>
+    </div>
+
+    <!------------------------------FOOTER---------------------------------------- -->
+    <footer class="footer">
+      <!-- Première version -->
+      <div class="links">
+        <button id="show" class="centre">
+          <span>Tu souhaites changer tes positions directement sur ton portefeuille?</span>
+          <p> Voici le lien !!!</p>
+          <a class="btn_lien" target="_top" href="https://www.etoro.com/fr/">
+            Click here
+          </a>
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
